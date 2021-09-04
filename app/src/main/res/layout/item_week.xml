@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="weekItem"
+            type="com.outreach.fiftytwoweekchallenge.WeekItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{weekItem.weekNumber}"
+            android:id="@+id/tvWeekNumber"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{weekItem.weekDeposit}"
+            android:id="@+id/tvWeekDeposit"
+            app:layout_constraintTop_toBottomOf="@id/tvWeekNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="16dp"
+            android:textAlignment="textEnd"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{weekItem.weekTotal}"
+            android:id="@+id/tvWeekTotal"
+            app:layout_constraintTop_toBottomOf="@id/tvWeekDeposit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="16sp"
+            android:textAlignment="center" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

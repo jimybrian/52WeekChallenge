@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">52 Week Challenge</string>
+    <string name="hint_amount">Enter an amount</string>
+</resources>
